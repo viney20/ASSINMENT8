@@ -42,9 +42,9 @@ class temperature:
 c = float(input("enter celcius value"))
 t = temperature()
 t.convertFarenheit(c)
-f = (input("enter farenheit value"))
+f = float(input("enter farenheit value"))
 t.convertCelsius(f)
-"""
+
 #Q.4- Create a class MovieDetails and initialize it with artistname,Year of release and ratings .
 class MovieDetails:
     def __init__(self):
@@ -84,37 +84,27 @@ ANS:-> #geting error because interprator wants '(' this  in line no 14&15  AFTER
 """
 #Q.7 Create a class Shape.Initialize it with length and breadth Create the method Area. Create class rectangle and square which inherits shape and access the method Area.
 class shape:
-    def __init__(self,length,breath):
-        self.length=length
-        self.breath=breath
+    def __init__(self):
+        self.length=int(input("enter length"))
+        self.breath=int(input("enter breadth"))
+    def area(self):
+        if self.length==self.breath:
+            area = self.length * self.breath
+            print("square area= ", area)
+        else:
+            area = self.length * self.breath
+            print("rectangle area= ", area)
         
 class square(shape):
-    def __init__(self, shape):
-        self.length= shape.length
-        self.breath= shape.breath
-        self.area
-    def area(self):
-        area = self.length * self.breath
-        print("square area= ", area)
-
-
+    def __init__(self):
+        super().__init__()
+   
 class rectangle(shape):
-    def __init__(self, shape):
-        self.length= shape.length
-        self.breath= shape.breath
-        self.area
-    def area(self):
-        area = self.length * self.breath
-        print("rectangle area= ", area)
-
-length = int(input("enter length"))
-breadth = int(input("enter breadth"))
-s = shape(length,breadth)
-sq = square(s)
-re = rectangle(s)
-if length==breadth:
-    sq.area()
-else:
-    re.area()
+    def __init__(self):
+        super().__init__()
+sq = square()
+sq.area()
+re = rectangle()
+re.area()
 
 
